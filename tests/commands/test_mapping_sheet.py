@@ -16,4 +16,5 @@ def test_command():
         mapping_sheet = bodskit.mapping_sheet.MappingSheet(input_filename=input_filename)
         mapping_sheet.handle()
 
-    assert actual.getvalue() == read_fixture('mapping-sheet-person-statement.csv').replace('\n', '\r\n')  # not sure why
+    assert actual.getvalue() == \
+        read_fixture('mapping-sheet-person-statement.csv').replace('\n', '\r\n')  # not sure why
