@@ -11,6 +11,7 @@ logger = logging.getLogger('bodskit')
 COMMAND_MODULES = (
     'bodskit.cli.commands.mapping_sheet',
     'bodskit.cli.commands.schema_report',
+    'bodskit.cli.commands.all_codes',
 )
 
 
