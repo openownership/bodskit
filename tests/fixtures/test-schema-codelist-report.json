@@ -22,7 +22,7 @@
         "null"
       ],
       "codelist": "b.csv",
-      "openCodelist": false,
+      "openCodelist": true,
       "items": {
         "type": "string"
       }
@@ -35,7 +35,6 @@
     "closedDisorder": {
       "type": "string",
       "codelist": "d.csv",
-      "openCodelist": false,
       "enum": [
         "bar",
         "foo"
