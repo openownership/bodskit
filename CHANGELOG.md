@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Added
 
+- "all-codes" command
 - "mapping_sheet" command
 - "schema-codelist-report" command
 
