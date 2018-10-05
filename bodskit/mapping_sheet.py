@@ -36,7 +36,7 @@ class MappingSheet:
             return ', '.join(links.values())
 
         def make_row(path, field, schema, deprecated, required_fields, is_reference=False):
-            row = {'path': path+field, 'deprecated': deprecated}
+            row = {'path': path+field, 'deprecated': deprecated, 'codelist': None, 'openCodelist': None}
 
             section = row['path'].split('/')[0] if '/' in row['path'] else ''
 
@@ -74,6 +74,21 @@ class MappingSheet:
             maxn = 'n' if row['type'] == 'array' else '1'
             minn = '1' if required else '0'
             row['range'] = minn + '..' + maxn
+
+            # codelists
+            if 'codelist' in schema:
+                row['codelist'] = schema['codelist']
+                if 'openCodelist' in schema:
+                    row['openCodelist'] = 'Open' if schema['openCodelist'] else 'Closed'
+                else:
+                    row['openCodelist'] = 'Unknown'
+            elif 'type' in schema and 'items' in schema and schema['type'] == 'array' \
+                    and 'codelist' in schema['items']:
+                row['codelist'] = schema['items']['codelist']
+                if 'openCodelist' in schema['items']:
+                    row['openCodelist'] = 'Open' if schema['items']['openCodelist'] else 'Closed'
+                else:
+                    row['openCodelist'] = 'Unknown'
 
             # Format or restrictions
             if 'format' in schema:
@@ -141,6 +156,7 @@ class MappingSheet:
         schema = display_properties(release)
 
         w = csv.DictWriter(sys.stdout, ['section', 'path', 'title', 'description', 'type', 'range', 'values', 'links',
+                                        'codelist', 'openCodelist',
                                         'deprecated', 'deprecationNotes'])
         w.writeheader()
         w.writerows(schema)

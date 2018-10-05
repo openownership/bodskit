@@ -1,0 +1,46 @@
+{
+  "title": "Source",
+  "description": "The source object is used to explain where information in a statement originated from, and to link to supporting information.",
+  "type": "object",
+  "properties": {
+    "type": {
+      "title": "Source type",
+      "description": "What type of source is this? Multiple tags can be combined. Values should come from the [source type](#sourcetype) codelist.",
+      "type": "string",
+      "enum": [
+        "selfDeclaration",
+        "officialRegister",
+        "thirdParty",
+        "primaryResearch",
+        "verified"
+        ],
+      "codelist": "sourceType.csv",
+      "openCodelist": false
+    },
+    "cats": {
+      "title": "Cats",
+      "description": "How many cats",
+      "type": "string",
+      "enum": [
+        "none",
+        "one",
+        "two",
+        "many"
+        ],
+      "codelist": "cats.csv",
+      "openCodelist": true
+    },
+    "dogs": {
+      "title": "Dogs",
+      "description": "How many dogs",
+      "type": "string",
+      "enum": [
+        "none",
+        "one",
+        "two",
+        "many"
+        ],
+      "codelist": "dogs.csv"
+    }
+  }
+}

@@ -1,0 +1,4 @@
+section,path,title,description,type,range,values,links,codelist,openCodelist,deprecated,deprecationNotes
+,cats,Cats,How many cats,string,1..1,"Codelist: none, one, two, many",,cats.csv,Open,,
+,dogs,Dogs,How many dogs,string,1..1,"Codelist: none, one, two, many",,dogs.csv,Unknown,,
+,type,Source type,What type of source is this? Multiple tags can be combined. Values should come from the source type codelist.,string,1..1,"Codelist: selfDeclaration, officialRegister, thirdParty, primaryResearch, verified",#sourcetype,sourceType.csv,Closed,,
