@@ -1,0 +1,2 @@
+section,path,title,description,type,range,values,links,deprecated,deprecationNotes
+,type,Source type,What type of source is this? Multiple tags can be combined. Values should come from the source type codelist.,array,0..n,"Codelist: selfDeclaration, officialRegister, thirdParty, primaryResearch, verified",#sourcetype,,

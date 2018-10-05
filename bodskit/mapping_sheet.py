@@ -83,6 +83,11 @@ class MappingSheet:
                 if None in values:
                     values.remove(None)
                 row['values'] = 'Codelist: ' + ', '.join(values)
+            elif 'type' in schema and 'items' in schema and schema['type'] == 'array' and 'enum' in schema['items']:
+                values = copy.copy(schema['items']['enum'])
+                if None in values:
+                    values.remove(None)
+                row['values'] = 'Codelist: ' + ', '.join(values)
             else:
                 row['values'] = ''
 
