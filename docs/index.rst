@@ -8,5 +8,6 @@ It is Python tool that can be used as a library from other Python programmes, or
 
 .. toctree::
 
+   installing.rst
    cli.rst
 
