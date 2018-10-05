@@ -13,7 +13,7 @@ class AllCodes:
 
         data = []
 
-        for path in glob.glob(os.path.join(self.codelist_directory, '*.csv')):
+        for path in sorted(glob.glob(os.path.join(self.codelist_directory, '*.csv'))):
             with open(path) as csvfile:
                 reader = csv.DictReader(csvfile, fieldnames=['code', 'title', 'description', 'technical note'])
                 next(reader, None)  # skip the headers
