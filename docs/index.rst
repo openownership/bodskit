@@ -4,7 +4,7 @@ BODS Data Tool
 This tool is not currently maintained 
 -------------------------------------
 
-Future work on command-line tooling for working with the Beneficial Ownership Data Standard will be merged with https://ocdskit.readthedocs.io. Please see that repo in the first instance, or contact us on `support@openownership.org <mailto:support@openownership.org>`_ if you have any issues.
+Command-line tooling for working with the Beneficial Ownership Data Standard (BODS) schema can be found in https://github.com/open-contracting/ocdskit. Tools for working with BODS data may be placed here in the future. Please contact us on [support@openownership.org](mailto:support@openownership.org) if you have any issues.
 
 Archived documentation
 ----------------------
